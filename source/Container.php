@@ -10,14 +10,23 @@ class Container
 
     use Collection;
 
-    public function set($name, $callback)
+    public function set($name, $callback, $isStatic = true)
     {
-        $this->setVariable($name, $callback);
+
+        $bag = new Bag($callback, $isStatic);
+
+        $this->setVariable($name, $bag);
     }
 
 
-    public function get($name) {
-
+    public function get($name)
+    {
+        $bag = $this->getVariable($name);
+        if ($bag) {
+            return $bag->getValue();
+        } else {
+            return null;
+        }
     }
 
 
