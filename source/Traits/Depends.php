@@ -9,6 +9,10 @@ trait Depends
     //must be overrided
     //protected $dependencies = array();
 
+
+    /**
+     * @return array
+     */
     public function getDependencies()
     {
         if (!$this->dependencies) {
@@ -17,6 +21,11 @@ trait Depends
         return $this->dependencies;
     }
 
+    /**
+     * @param $name
+     * @param $value
+     * @return $this
+     */
     public function setDependency($name, $value)
     {
         if (!$this->dependencies) {
@@ -27,6 +36,7 @@ trait Depends
 
         return $this;
     }
+
 
     public function getDependency($name)
     {
@@ -41,6 +51,10 @@ trait Depends
         }
     }
 
+    /**
+     * @param Container $container
+     * @return $this
+     */
     public function resolveDependencies(Container $container)
     {
         if (!$this->dependencies) {
