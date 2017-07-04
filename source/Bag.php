@@ -10,7 +10,6 @@ class Bag
     protected $callback;
 
 
-    protected $calls=array();
 
 
     public function __construct($callback, $isStatic = true)

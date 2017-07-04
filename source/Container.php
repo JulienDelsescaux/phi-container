@@ -30,7 +30,7 @@ class Container
         if ($bag) {
             return $bag->getValue();
         } else {
-            return null;
+            throw new \Exception('Container has no value with name "'.$name.'"');
         }
     }
 
