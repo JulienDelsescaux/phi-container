@@ -4,7 +4,7 @@ namespace Phi\Container;
 
 use Phi\Traits\Collection;
 
-class Container
+class Container implements \Phi\Container\Interfaces\Container
 {
 
 
@@ -24,11 +24,11 @@ class Container
     }
 
 
-    public function get($name)
+    public function get($name, $parameters =array())
     {
         $bag = $this->getVariable($name);
         if ($bag) {
-            return $bag->getValue();
+            return $bag->getValue($parameters);
         } else {
             throw new \Exception('Container has no value with name "'.$name.'"');
         }
