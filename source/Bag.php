@@ -1,5 +1,8 @@
 <?php
+
 namespace Phi\Container;
+
+use Phi\Exception;
 
 class Bag
 {
@@ -8,8 +11,6 @@ class Bag
     protected $value = null;
     protected $isStatic = true;
     protected $callback;
-
-
 
 
     public function __construct($callback, $isStatic = true)
@@ -23,10 +24,12 @@ class Bag
 
         if ($this->value !== null && $this->isStatic) {
             return $this->value;
-        } else {
+        }
+        else {
             if (is_callable($this->callback)) {
                 $this->value = call_user_func_array($this->callback, $parameters);
-            } else {
+            }
+            else {
                 $this->value = $this->callback;
             }
             return $this->value;
