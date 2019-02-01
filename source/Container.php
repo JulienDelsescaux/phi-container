@@ -24,11 +24,21 @@ class Container implements \Phi\Container\Interfaces\Container
     }
 
 
-    public function get($name, $parameters =array())
+    public function get($name, $parameters = array())
     {
         $bag = $this->getVariable($name);
         if ($bag) {
             return $bag->getValue($parameters);
+        } else {
+            throw new \Exception('Container has no value with name "'.$name.'"');
+        }
+    }
+
+    public function reload($name, $parameters = array())
+    {
+        $bag = $this->getVariable($name);
+        if ($bag) {
+            return $bag->reload($parameters);
         } else {
             throw new \Exception('Container has no value with name "'.$name.'"');
         }
