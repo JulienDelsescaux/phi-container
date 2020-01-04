@@ -1,0 +1,46 @@
+{
+    "_readme": [
+        "This file locks the dependencies of your project to a known state",
+        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
+        "This file is @generated automatically"
+    ],
+    "content-hash": "df5c50019296afae5aaede36e72ec260",
+    "packages": [
+        {
+            "name": "phi-event",
+            "version": "0.1.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/ElBiniou/phi-event.git",
+                "reference": "9ce475c1ad69ec4f4cb3cca7c0ee7e7a3e13a2e7"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/ElBiniou/phi-event/zipball/9ce475c1ad69ec4f4cb3cca7c0ee7e7a3e13a2e7",
+                "reference": "9ce475c1ad69ec4f4cb3cca7c0ee7e7a3e13a2e7",
+                "shasum": ""
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Phi\\Event\\": "source/class"
+                },
+                "files": []
+            },
+            "description": "Phi event",
+            "support": {
+                "source": "https://github.com/ElBiniou/phi-event/tree/master",
+                "issues": "https://github.com/ElBiniou/phi-event/issues"
+            },
+            "time": "2019-04-08T06:49:17+00:00"
+        }
+    ],
+    "packages-dev": [],
+    "aliases": [],
+    "minimum-stability": "stable",
+    "stability-flags": [],
+    "prefer-stable": false,
+    "prefer-lowest": false,
+    "platform": [],
+    "platform-dev": []
+}
