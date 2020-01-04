@@ -1,13 +1,13 @@
 {
-	"name": "phi/container",
+	"name": "elbiniou/phi-container",
 	"description": "Phi container",
 
 	"repositories": [
-		{"type": "vcs", "url": "https://github.com/ElBiniou/phi-event"}
+		{"type": "vcs", "url": "https://github.com/elbiniou/phi-event"}
 	],
 	"require":
 	{
-		"phi-event": "0.1.0"
+		"elbiniou/phi-event": "0.1.0"
 	},
 
 	"autoload": {
